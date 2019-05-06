@@ -4,11 +4,12 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
 import firebase from 'firebase';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
-    
+
     componentWillMount() {
-          // Initialize Firebase
+        // Initialize Firebase
         const config = {
             apiKey: 'AIzaSyDkYG1EQ81juAodMXl82x0GE9T_viESHwo',
             authDomain: 'manager-1127c.firebaseapp.com',
@@ -25,11 +26,7 @@ class App extends Component {
         //The Provider provides our store so it is available throughout out applications.
         return (
             <Provider store={createStore(reducers)}>
-                <View>
-                    <Text>
-                        Hello!
-                    </Text>
-                </View>
+                <LoginForm />
             </Provider>
         );
     }
