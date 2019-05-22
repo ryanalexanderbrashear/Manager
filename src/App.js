@@ -6,6 +6,7 @@ import reducers from './reducers';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import LoginForm from './components/LoginForm';
+import RouterComponent from './Router';
 
 class App extends Component {
 
@@ -30,9 +31,7 @@ class App extends Component {
         //The Provider provides our store so it is available throughout out applications.
         return (
             <Provider store={store}>
-                <SafeAreaView>
-                    <LoginForm />
-                </SafeAreaView>
+                <RouterComponent />
             </Provider>
         );
     }
