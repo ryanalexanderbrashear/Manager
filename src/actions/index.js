@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 import { EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_USER_SUCCESS, LOGIN_USER_FAIL, LOGIN_USER } from "./types";
+import { Actions } from 'react-native-router-flux';
 
 //Action Creators
 
@@ -36,6 +37,8 @@ const loginUserSuccess = (dispatch, user) => {
         type: LOGIN_USER_SUCCESS,
         payload: user
     });
+    //Using react-native-router-flux, each scene we create has a function created using the key property. We can navigate to that screen using that function
+    Actions.main();
 }
 
 const loginUserFail = (dispatch) => {
