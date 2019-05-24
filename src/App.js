@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
-import LoginForm from './components/LoginForm';
 import RouterComponent from './Router';
 
 class App extends Component {
