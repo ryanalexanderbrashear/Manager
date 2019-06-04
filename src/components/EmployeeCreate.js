@@ -8,7 +8,7 @@ class EmployeeCreate extends Component {
 
     onButtonPress() {
         const { name, phone, shift } = this.props;
-        this.props.employeeCreate({ name, phone, shift });
+        this.props.employeeCreate({ name, phone, shift: shift || 'Monday' }); //This works because empty string is falsy in Javascript, so it will go with Monday
     }
 
     render() {
